@@ -171,8 +171,26 @@ export const UserListPage = ({ users }: Props) => {
         <h1 className="user-list-title">ユーザー一覧</h1>
     //省略
 ```
+### 2. コンポーネントの登録
+```typescript
+// frontend/src/app.tsx
+reactView.registerComponents({
+    Welcome: WelcomePage,
+    "Users/Index": UserListPage,
+    "Users/Show": UserDetailPage,
+    "Users/NotFound": UserNotFoundPage,
+});
+```
+キーとコンポーネントを一致するように指定します。
+```php
+//PHP 使用例：コントローラーにて
+return ReactView::render(
+    component: "User/UserList",
+    props: ["users" => $output->users],
+);
+```
 
-### 3. CSS/Sass の使用
+### 2. CSS/Sass の使用
 
 ```scss
 // frontend/scss/app.scss
