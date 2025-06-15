@@ -1,0 +1,19 @@
+{
+  "name": "myprojects/mini-framework",
+  "description": "A mini PHP framework",
+  "type": "project",
+  "require": {
+    "php": ">=8.0",
+    "vlucas/phpdotenv": "^5.5",
+    "illuminate/collections": "^12.18"
+  },
+  "autoload": {
+    "psr-4": {
+      "Core\\Framework\\": "Core/Framework/",
+      "App\\": "App/"
+    },
+    "files": [
+      "Core/helpers.php"
+    ]
+  }
+}
